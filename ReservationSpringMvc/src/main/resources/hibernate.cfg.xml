@@ -5,7 +5,7 @@
     <session-factory>
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/resrvyoucodee?useSSL=false</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/try?useSSL=false</property>
         <property name="connection.username">root</property>
         <property name="connection.password"></property>
         <!-- JDBC connection pool settings ... using built-in test pool -->
@@ -25,8 +25,15 @@
         <property name="hibernate.dbcp.minIdle">5</property>
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
          <!--Entity to map-->
-   <!--       <mapping class="" />
-      <mapping class=""/>
+   <mapping class="com.reservation.model.User" />
+      <mapping class="com.reservation.model.Role" />
+            <mapping class="com.reservation.model.Admin" />
+            <mapping class="com.reservation.model.Apprenant" />
+            <mapping class="com.reservation.model.NombrePlace" />
+            <mapping class="com.reservation.model.Reservation" />
+      
+   
+ <!--      <mapping class=""/>
         <mapping class="" />
         <mapping class="" />
         <mapping class="" />

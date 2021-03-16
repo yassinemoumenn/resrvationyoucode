@@ -9,12 +9,15 @@ import javax.persistence.*;
  * 
  */
 @Entity
+@Table(name = "users")
 @NamedQuery(name="User.findAll", query="SELECT u FROM User u")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private int id;
+	@Column(name = "id_user")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long idUser;
 
 	private String email;
 
@@ -32,12 +35,21 @@ public class User implements Serializable {
 	public User() {
 	}
 
-	public int getId() {
-		return this.id;
+	public User(String email, String nom, String password, String prenom, Role role) {
+		super();
+		this.email = email;
+		this.nom = nom;
+		this.password = password;
+		this.prenom = prenom;
+		this.role = role;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public Long getId() {
+		return this.idUser;
+	}
+
+	public void setId(Long id) {
+		this.idUser = id;
 	}
 
 	public String getEmail() {
@@ -78,6 +90,12 @@ public class User implements Serializable {
 
 	public void setRole(Role role) {
 		this.role = role;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + idUser + ", email=" + email + ", nom=" + nom + ", password=" + password + ", prenom=" + prenom
+				+ ", role=" + role + "]";
 	}
 
 }

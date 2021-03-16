@@ -16,7 +16,8 @@ public class Role implements Serializable {
 
 	@Id
 	@Column(name="id_role")
-	private int idRole;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long idRole;
 
 	@Column(name="type_role")
 	private String typeRole;
@@ -28,11 +29,18 @@ public class Role implements Serializable {
 	public Role() {
 	}
 
-	public int getIdRole() {
+	public Role(Long idRole, String typeRole, List<User> users) {
+		super();
+		this.idRole = idRole;
+		this.typeRole = typeRole;
+		this.users = users;
+	}
+
+	public Long getIdRole() {
 		return this.idRole;
 	}
 
-	public void setIdRole(int idRole) {
+	public void setIdRole(Long idRole) {
 		this.idRole = idRole;
 	}
 
