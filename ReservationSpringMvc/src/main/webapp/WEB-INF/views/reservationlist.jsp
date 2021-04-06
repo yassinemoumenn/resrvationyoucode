@@ -24,7 +24,8 @@
 
 </head>
 <body>
-	
+   <a href="logout" class="button3">logout</a>
+   
 <!-- For Demo Purpose -->
 <div class="container py-5">
     <header class="text-center">

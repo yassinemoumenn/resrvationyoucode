@@ -25,6 +25,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
+   <a href="logout" class="button3">logout</a>
 	
 	<div class="limiter">
 		<div class="container-table100">
@@ -32,15 +33,19 @@
 				<div class="table100 ver1 m-b-110">
 					<div class="table100-head">
 						<table>
-							<thead>
-								<tr class="row100 head">
-									<th class="cell100 column1">Etudient</th>
- 									<th class="cell100 column3">Date</th>
-									<th class="cell100 column4">Confirmation</th>
-									<th scope="cell100 column5">Select</th>
-									
-								</tr>
-							</thead>
+						
+			
+                <thead>
+                  <tr class="row100 head">
+                    <th class="cell100 column1">Etudient</th>
+                    <th class="cell100 column2">Date</th>
+                    <th class="cell100 column3">Confirmation</th>
+                    <th class="cell100 column3">Seclect</th>
+                    
+                  
+                  </tr>
+                </thead>
+                
 						</table>
 					</div>
 

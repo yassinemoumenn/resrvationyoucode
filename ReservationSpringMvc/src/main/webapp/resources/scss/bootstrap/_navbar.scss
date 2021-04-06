@@ -27,8 +27,8 @@
   // few properties so that content nested within behave properly.
   > .container,
   > .container-fluid {
-    display: flex;
-    flex-wrap: wrap;
+/*    display:	block;
+*/ /*   flex-wrap: wrap;*/
     align-items: center;
     justify-content: space-between;
   }

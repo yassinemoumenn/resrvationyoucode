@@ -17,9 +17,10 @@
 
 h1 a {
   font-size: 80px;
-  color: #262ab1;
+  color:  #fff;
   text-decoration: none;
   text-transform: uppercase;
+ 
 }
 
 .popover {

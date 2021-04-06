@@ -19,7 +19,6 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Login #07</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -45,6 +44,7 @@
 								</div>
 			      	</div>
 							<form action="Login" method="post" class="signin-form">
+								
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Email</label>
 			      			<input type="text" name="email"class="form-control" placeholder="Email" required>

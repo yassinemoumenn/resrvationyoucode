@@ -39,14 +39,18 @@ public class HomeController {
 	   public String login() {
 	      return "login";
 	  }
+     @RequestMapping(value = "/hisorique", method = RequestMethod.GET)
+	   public String hisorique() {
+	      return "hisorique";
+	  }
      
      @RequestMapping(value = "/reservation", method = RequestMethod.GET)
 	   public String reservation() {
 	      return "reservation";
 	  }
-     @RequestMapping(value = "/accuill", method = RequestMethod.GET)
+     @RequestMapping(value = "/reservationlist", method = RequestMethod.GET)
 	   public String accuill() {
-	      return "reservation";
+	      return "reservationlist";
 	  }
    
    

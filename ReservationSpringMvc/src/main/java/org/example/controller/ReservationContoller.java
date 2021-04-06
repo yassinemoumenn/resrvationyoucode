@@ -7,13 +7,13 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-
-
+import org.example.dao.ReservationDaoImpl;
 import org.example.model.Apprenant;
 import org.example.model.Reservation;
 import org.example.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,7 +24,8 @@ public class ReservationContoller {
 
 	
 	
-	
+	@Autowired
+    private ReservationDaoImpl res;
 	@Autowired
     private ReservationService reservationService;
 	
@@ -73,7 +74,7 @@ public class ReservationContoller {
            
         reservation.setApprenant((Apprenant) LoginController.user);
 		   reservationService.addReservation(reservation);
-           return new ModelAndView("redirect:/");
+           return new ModelAndView("redirect:/hisorique");
 
        }
 
@@ -95,4 +96,12 @@ public class ReservationContoller {
         return "redirect:/reservation";
     }
 
-}
+
+@RequestMapping(value = "/hisorique")
+public String historiquePersonne(ModelAndView theModel,Model model, HttpServletRequest req){
+
+        List<Reservation> list = res.getResByUser(LoginController.user);
+        model.addAttribute("listReservation", list);
+    
+    return "hisorique";
+}}

@@ -57,7 +57,8 @@ public class LoginController {
 			}
 
 		} else {
-			System.out.println("Compte not found");
+			System.out.println("ACCOUNT NOR EXISET");
+			
 			return "redirect:/login";
 		}
 		return null;

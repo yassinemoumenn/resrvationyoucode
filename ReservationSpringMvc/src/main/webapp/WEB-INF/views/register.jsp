@@ -21,9 +21,7 @@
 			<div class="form-left">
 				<h2>INFOMATION</h2>
 				
-				<div class="form-left-last">
-					<input type="submit" name="account" class="account" value="Have An Account">
-				</div>
+				
 			</div>
 			<form class="form-detail" action="Register" method="post" id="myform">
 				<h2>REGISTER FORM</h2>
